@@ -1,0 +1,20 @@
+A small project to show there may be a memory leak using Vert.x
+schedulers and RxJava infinite streams.
+
+The different png provided show the memory evolution with different
+schedulers.
+
+With the Vert.x schedulers the memory grows fast and is never garbaged.
+With RxJava schedulers the memory is garbaged.
+
+== Environment used
+
+- Vertx 3.5.0
+- Java 10 (Java 8)
+- Linux Ubuntu
+
+== How to run?
+
+Run the main of the class `WorkerIssue` (with for example -Xms1024m -Xmx1024m) and profile the memory
+with a JVM tool (VisualVM, async-profile, etc.)
+
